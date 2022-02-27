@@ -1,0 +1,101 @@
+p, span, b{
+font-family: 'Roboto Serif', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Anton', sans-serif;
+}
+
+.logo{
+    color: #08D665;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.mainColor{
+    color: #08D665;
+}
+
+/* display section */
+.d-Img{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+#mainBtn{
+    background-color: #08D665;
+    color: white;
+    margin-top: 15px;
+}
+
+#mainBtn:hover{
+    background-color: transparent;
+    border: 1px solid #08D665;
+    color: #08D665;
+}
+.main-img img {
+  width: 272px;
+  margin-top: -29px;
+}
+.info-content{
+    padding-left: 30px;
+    border-left: 3px solid #08d665;
+}
+
+.card-body:hover{
+     transform: translateY(-6px);
+     transition: 500ms;
+}
+
+/* progresbar */
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+div[role="progressbar"] {
+  --size: 8rem;
+  --fg: #08d665;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, rgb(36, 33, 33) 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+/* demo */
+.newProject img {
+  height: 480px;
+  transition: 500ms;
+}
+.newProject img:hover{
+  transform: translateY(-6px);
+  opacity: 0.8;
+}
+
+.circle{
+  border-radius: 50%;
+}
+
+footer ul{};
+footer ul li{
+  font-size: 17px;
+}
+footer ul li:hover{
+  cursor: pointer;
+}
